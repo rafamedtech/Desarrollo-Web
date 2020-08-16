@@ -9,8 +9,8 @@ valores */
 
 /* selector de etiqueta header - section article - nav */
 header {
-    background: pink;
-    color: red;
+    background: #ffffff;
+    
 }
 /* selector descendente  */
 /* body header div nav ol li a */
@@ -21,3 +21,64 @@ header {
 
 /* Selector de id # */
 /* #portafolio */
+
+/* gris oscuro = #1d252c
+gris claro = #626262
+background gris = #1b2127 */
+/* celeste = #026fff */
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+ 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Fjalla One', sans-serif;
+    font-weight: normal;
+    /* font-style: italic; */
+} 
+
+h1 {
+    font-size: 40px;
+    line-height: 1.5em;
+    letter-spacing: -.2px;
+    color: white;
+    /* text-transform: uppercase;
+    text-decoration: underline; */
+}
+
+h1 strong {
+    color: #026fff;
+}
+
+.hero {
+    height: 300px;
+    background-image: url(../images/hero.jpg);
+    background-color: #1b2127;
+    background-size: 500px 300px;
+    background-repeat: no-repeat;
+    background-position-x: right;
+}
+
+.project-details {
+    width: 500px;
+    height: 200px;
+}
+
+.project-imageContainer {
+    width: 500px;
+}
+
+.header {
+    background-color: #1b2127;
+    color: white;
+}
+
+.header a {
+    color: white;
+    text-decoration: none;
+}
