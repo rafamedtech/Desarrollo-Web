@@ -29,6 +29,7 @@ background gris = #1b2127 */
 
 body {
     font-family: 'Source Sans Pro', sans-serif;
+    margin: 0;
 }
  
 h1,
@@ -47,12 +48,24 @@ h1 {
     line-height: 1.5em;
     letter-spacing: -.2px;
     color: white;
+    margin: 100px 520px 70px 30px;
     /* text-transform: uppercase;
     text-decoration: underline; */
 }
 
 h1 strong {
     color: #026fff;
+}
+
+ol,
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+figure {
+    margin: 0;
 }
 
 .hero {
@@ -62,6 +75,29 @@ h1 strong {
     background-size: 500px 300px;
     background-repeat: no-repeat;
     background-position-x: right;
+}
+
+.portfolio {
+    background-color: #fafafa;
+}
+
+.project {
+    /* border-top: 10px solid red;
+    border-right: 10px solid green;
+    border-left: 10px solid orange;
+    border-bottom: 10px solid pink; */
+    /* border-top-color: red;
+    border-top-width: 15px;
+    border-top-style: solid; */
+    border: 1px solid gray;
+    border-radius: 10px;
+    /* border-top-left-radius: 50px;
+    border-top-right-radius: 10px; */
+    margin: 10px;
+    margin-bottom: 15px;
+    padding: 20px;
+    background: white;
+    display: flex;
 }
 
 .project-details {
@@ -76,9 +112,44 @@ h1 strong {
 .header {
     background-color: #1b2127;
     color: white;
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
 }
 
-.header a {
-    color: white;
-    text-decoration: none;
+.header ol {
+    display: flex;
+    height: inherit;
+}
+
+.header ol li { /* .header ol li hereda de .header ol */
+    height: inherit;
+  }
+  
+.header a { /* .header a hereda de .header ol li */
+  color: white;
+  text-decoration: none;
+  height: inherit;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.menu { /* .menu hereda de .header */
+   height: inherit;
+ }
+
+.flexbox {
+    display: flex;
+    flex-direction: row;
+    /* flex-wrap: nowrap; */
+    flex-wrap: wrap;
+}
+
+.box {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    border: 1px solid red;
+    flex-shrink: 0;
 }
