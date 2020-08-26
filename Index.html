@@ -17,7 +17,7 @@
     </style> -->
 </head>
 <body>
-    <i class="icon-menu burger-button"></i>
+    <i class="icon-menu burger-button" id='burger-menu'></i>
     <header class="header">
         <div class="container">
             <figure class="logo">
@@ -68,10 +68,10 @@
     </section>
    
     <div class="container">
-        <h2 class="event-list-title">Mas sobre mi experiencia</h2>
+        <h2 class="event-list-title" id="eventos">Mas sobre mi experiencia</h2>
     </div>
 
-     <section id="eventos" class="event-list">
+     <section class="event-list">
     <div class="container">
             <article class="event">
                 <figure class="event-imageConteiner">
@@ -149,5 +149,34 @@
             </div>
         </div>
     </footer>
+    <script>
+        console.log('Hola mundo es el primer console log en js');
+        const ipad = window.matchMedia('screen and (max-width: 767px)');
+        const menu = document.querySelector('.menu');
+        // console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu')
+        // console.log(burgerButton);
+
+
+        ipad.addListener(validation)
+
+        function validation(event) {
+            if (event.matches) {
+        burgerButton.addEventListener('click', hideShow)
+            } else {
+        burgerButton.removeEventListener('click', hideShow)
+            }
+        }
+
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {
+                menu.classList.remove('is-active');
+            } else {
+        menu.classList.add('is-active');
+            }
+        }
+
+        validation(ipad);
+    </script>
 </body>
 </html>
